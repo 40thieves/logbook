@@ -2,10 +2,15 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::controller('/accounts', 'AccountsController');
-Route::get('/login', 'AccountsController@getLogin');
-Route::post('/login', 'AccountsController@postLogin');
-Route::get('/logout', 'AccountsController@getLogout');
+//Route::controller('/accounts', 'AuthController');
+Route::get('/login', 'AuthController@getLogin');
+Route::post('/login', 'AuthController@postLogin');
+Route::get('/logout', 'AuthController@getLogout');
+
+Route::get('/forgot', 'AuthController@getEmail');
+Route::post('/forgot', 'AuthController@postEmail');
+Route::get('/reset', 'AuthController@getReset');
+Route::post('/reset', 'AuthController@postReset');
 
 //Route::controllers([
 //	'auth' => 'Auth\AuthController',
