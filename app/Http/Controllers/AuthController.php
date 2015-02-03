@@ -16,8 +16,12 @@ class AuthController extends Controller {
 	use ResetsPasswords;
 
 	/**
-	 * Create a new authentication controller instance.
-	 *
+	 * Redirect path
+	 * @var string
+	 */
+	protected $redirectTo = '/';
+
+	/**
 	 * @param Guard $auth
 	 * @param Registrar $registrar
 	 * @param PasswordBroker $passwords
