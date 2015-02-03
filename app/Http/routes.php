@@ -2,11 +2,11 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/login', 'AuthController@getLogin');
-Route::post('/login', 'AuthController@postLogin');
-Route::get('/logout', 'AuthController@getLogout');
+Route::get('/login', 'Auth\AuthController@getLogin');
+Route::post('/login', 'Auth\AuthController@postLogin');
+Route::get('/logout', 'Auth\AuthController@getLogout');
 
-Route::get('/forgot', 'AuthController@getEmail');
-Route::post('/forgot', 'AuthController@postEmail');
-Route::get('/reset', 'AuthController@getReset');
-Route::post('/reset', 'AuthController@postReset');
+Route::get('/forgot', 'Auth\PasswordController@getEmail');
+Route::post('/forgot', 'Auth\PasswordController@postEmail');
+Route::get('/reset', 'Auth\PasswordController@getReset');
+Route::post('/reset', 'Auth\PasswordController@postReset');
