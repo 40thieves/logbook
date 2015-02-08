@@ -8,7 +8,7 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 
 Route::get('forgot', 'Auth\PasswordController@getEmail');
 Route::post('forgot', 'Auth\PasswordController@postEmail');
-Route::get('reset', 'Auth\PasswordController@getReset');
+Route::get('reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('reset', 'Auth\PasswordController@postReset');
 
 Route::controllers([
