@@ -41,6 +41,8 @@
 			<label for="status-hard">Hard</label>
 			<input type="radio" name="status" id="status-hard" value="3">
 		</div>
+
+		<button type="submit">Submit</button>
 	</form>
 
 @endsection
