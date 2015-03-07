@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
@@ -34,6 +35,19 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
      * @Given I am logged in
      */
     public function iAmLoggedIn()
+    {
+        $user = User::create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => 'password',
+        ]);
+
+        Auth::login($user);
+
+        $this->assertSignedIn();
+    }
+
+    protected function assertSignedIn()
     {
         PHPUnit::assertTrue(Auth::check());
     }
