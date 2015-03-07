@@ -6,7 +6,7 @@ Feature: Create Logs
 
   Scenario: Creating log (without map data)
     Given I am logged in
-    And I am on "/new"
+    And I am on "new"
     When I fill in "date" with "07/03/2015"
     And I fill in "region" with "Snowdonia"
     And I fill in "status" with "Leader"
