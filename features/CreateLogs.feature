@@ -15,3 +15,7 @@ Feature: Create Logs
     And I select "1" from "status"
     And I press "Submit"
     Then I should see "Snowdonia Route"
+    And I should see "With Me"
+    And I should see "A description of the route"
+    And I should see "Leader"
+    And I should see "Easy"
