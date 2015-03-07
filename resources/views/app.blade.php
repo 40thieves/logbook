@@ -11,10 +11,10 @@
 <body>
 	<nav>
 		@if (Auth::guest())
-			<a href="/auth/login">Login</a>
-			<a href="/auth/register">Register</a>
+			<a href="/login">Login</a>
+			<a href="/new">Create New</a>
 		@else
-			<a href="/auth/logout">Logout</a>
+			<a href="/logout">Logout</a>
 		@endif
 	</nav>
 
