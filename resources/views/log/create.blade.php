@@ -35,11 +35,11 @@
 			<p>Status</p>
 
 			<label for="status-easy">Easy</label>
-			<input type="radio" name="status-easy" id="status-easy">
+			<input type="radio" name="status" id="status-easy" value="1">
 			<label for="status-medium">Medium</label>
-			<input type="radio" name="status-medium" id="status-medium">
+			<input type="radio" name="status" id="status-medium" value="2">
 			<label for="status-hard">Hard</label>
-			<input type="radio" name="status-hard" id="status-hard">
+			<input type="radio" name="status" id="status-hard" value="3">
 		</div>
 	</form>
 
