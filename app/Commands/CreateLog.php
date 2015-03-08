@@ -37,7 +37,7 @@ class CreateLog extends Command {
 	/**
 	 * Create a new command instance.
 	 */
-	public function __construct($date, $region, $members, $description, $wasLeader, $status)
+	public function __construct(DateTime $date, $region, $members, $description, $wasLeader, $status)
 	{
 		$this->date = $date;
 		$this->region = $region;
