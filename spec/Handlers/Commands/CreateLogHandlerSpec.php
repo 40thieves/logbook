@@ -1,6 +1,7 @@
 <?php namespace spec\App\Handlers\Commands;
 
 use App\Commands\CreateLog;
+use App\Domain\Logs\Log;
 use App\Domain\Logs\LogRepository;
 use DateTime;
 use PhpSpec\ObjectBehavior;
@@ -12,7 +13,7 @@ class CreateLogHandlerSpec extends ObjectBehavior
     {
         $repo->commit()->shouldBeCalled();
 
-        $this->handle(new CreateLog(
+        $log = $this->handle(new CreateLog(
             new DateTime(),
             'Snowdonia',
             'Me',
@@ -20,5 +21,7 @@ class CreateLogHandlerSpec extends ObjectBehavior
             true,
             1
         ));
+
+        $log->shouldBeAnInstanceOf(Log::class);
     }
 }
